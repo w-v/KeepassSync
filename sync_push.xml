@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TriggerCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Triggers>
+		<Trigger>
+			<Guid>n6ZthpPo1UOKHG+S+GtvHA==</Guid>
+			<Name>sync pull</Name>
+			<Events>
+				<Event>
+					<TypeGuid>5f8TBoW4QYm5BvaeKztApw==</TypeGuid>
+					<Parameters>
+						<Parameter>0</Parameter>
+						<Parameter />
+					</Parameters>
+				</Event>
+			</Events>
+			<Conditions />
+			<Actions>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter />
+						<Parameter>0</Parameter>
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter>sync push</Parameter>
+						<Parameter>0</Parameter>
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>2uX4OwcwTBOe7y66y27kxw==</TypeGuid>
+					<Parameters>
+						<Parameter>bash</Parameter>
+						<Parameter>-c "cd {DB_DIR};./sync.sh pull"</Parameter>
+						<Parameter>True</Parameter>
+						<Parameter>3</Parameter>
+						<Parameter />
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>Iq135Bd4Tu2ZtFcdArOtTQ==</TypeGuid>
+					<Parameters>
+						<Parameter>{DB_DIR}/tmp/m.kdbx.tmp</Parameter>
+						<Parameter />
+						<Parameter />
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter>sync push</Parameter>
+						<Parameter>1</Parameter>
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter />
+						<Parameter>1</Parameter>
+					</Parameters>
+				</Action>
+			</Actions>
+		</Trigger>
+		<Trigger>
+			<Guid>xSEB1bKg406nQHw1bGTiDg==</Guid>
+			<Name>sync push</Name>
+			<Events>
+				<Event>
+					<TypeGuid>s6j9/ngTSmqcXdW6hDqbjg==</TypeGuid>
+					<Parameters>
+						<Parameter>0</Parameter>
+						<Parameter />
+					</Parameters>
+				</Event>
+			</Events>
+			<Conditions />
+			<Actions>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter />
+						<Parameter>0</Parameter>
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>Iq135Bd4Tu2ZtFcdArOtTQ==</TypeGuid>
+					<Parameters>
+						<Parameter>{DB_DIR}/tmp/m.kdbx.tmp</Parameter>
+						<Parameter />
+						<Parameter />
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>2uX4OwcwTBOe7y66y27kxw==</TypeGuid>
+					<Parameters>
+						<Parameter>bash</Parameter>
+						<Parameter>-c "cd {DB_DIR};./sync.sh push"</Parameter>
+						<Parameter>True</Parameter>
+						<Parameter>3</Parameter>
+						<Parameter />
+					</Parameters>
+				</Action>
+				<Action>
+					<TypeGuid>tkamn96US7mbrjykfswQ6g==</TypeGuid>
+					<Parameters>
+						<Parameter />
+						<Parameter>1</Parameter>
+					</Parameters>
+				</Action>
+			</Actions>
+		</Trigger>
+		<Trigger>
+			<Guid>yxhb7AGrpkOAV8Ds4XVb0Q==</Guid>
+			<Name>Minimize on open</Name>
+			<Enabled>false</Enabled>
+			<Events>
+				<Event>
+					<TypeGuid>5f8TBoW4QYm5BvaeKztApw==</TypeGuid>
+					<Parameters>
+						<Parameter>0</Parameter>
+						<Parameter />
+					</Parameters>
+				</Event>
+			</Events>
+			<Conditions />
+			<Actions>
+				<Action>
+					<TypeGuid>2uX4OwcwTBOe7y66y27kxw==</TypeGuid>
+					<Parameters>
+						<Parameter>bash</Parameter>
+						<Parameter>-c "sleep 1; xdotool search --onlyvisible --classname KeePass windowminimize"</Parameter>
+						<Parameter>False</Parameter>
+						<Parameter>0</Parameter>
+						<Parameter />
+					</Parameters>
+				</Action>
+			</Actions>
+		</Trigger>
+	</Triggers>
+</TriggerCollection>
