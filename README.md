@@ -9,7 +9,7 @@ includes Keepass2 triggers for executing the script when needed
 Make a '''conf.sh''' following this format :
 
     
-    SRVS=(  )           # server adresses separated by blanks
+    SRVS=(  )           # server adresses inside parentheses separated by blanks
     PORT=               # ssh port
     USR=                # ssh user
     CLD_PATH=           # path of the kdbx file on the NFS share
@@ -18,5 +18,6 @@ Make a '''conf.sh''' following this format :
     MAIN=               # kdbx database path
     LOG=                # log file path
 
-Copy the triggers to the clipboard, paste them in Keepass (Tools/Triggers/Tools button)
-Put the script in the same directory as the database
+Copy the triggers to the clipboard, paste them in Keepass (Tools/Triggers/Tools button)  
+Put the script in the same directory as the database  
+Requires pubkey auth
