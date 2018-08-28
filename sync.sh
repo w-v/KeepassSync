@@ -2,15 +2,7 @@
 
 # this script synchronises a password database with an NFS share or by ssh if the share is not accessible
 
-SRVS=( "10.0.2.3" "h.w-v.fr" )
-PORT=22
-USR='robin'
-CLD_PATH="/media/cloud/m.kdbx" 
-SSH_PATH="/srv/cld/m.kdbx"
-TMP_CPY="tmp/m.kdbx.tmp"
-MAIN="m.kdbx"
-LOG="tmp/log"
-
+source conf.sh
 
 if [ -f $CLD_PATH ]; then
 
